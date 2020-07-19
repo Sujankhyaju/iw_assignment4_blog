@@ -1,0 +1,47 @@
+{% extends 'blogs/base_blog.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+   <!-- {% for author in data %}
+    <div class="col mb-4">
+      <div class="card">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{author.name}}</h3>
+          <small><p class="card-text">{{author.bio}}</p></small><br><br>
+        </div>
+      </div>
+    </div>
+    {% endfor %} -->
+    <div class="col-md-9 bann-right">
+    <ul class="row portfolio list-unstyled mb-0 boxed-portfolio">
+      <!-- project -->
+      {% for author in data %}
+      <li class="col-md-8 col-lg-4 project" data-groups="[&quot;skill1&quot;]">
+          <div class="card mb-0">
+              <div class="project m-0">
+                  <figure class="portfolio-item">
+                      <a href="#" class="hovereffect">
+                          <img class="img-responsive " src="{% static 'blogs/images/person-placeholder.png' %}" alt="">
+                          <div class="overlay">
+                          </div><!-- / overlay -->
+                      </a><!-- / hovereffect -->
+                  </figure><!-- / portfolio-item -->
+              </div><!-- / project -->
+              <div class="card-body">
+                  <h3 class='card-text fw-bold'><a href="#" class="card-title title-link fs-16 fw-bold">{{author.name}}</a></h3>
+                  <p class="card-text mt-5 mb-0 fs-14">{{ author.bio }}</p>
+              </div><!-- / card-body -->
+          </div><!-- / card -->
+      </li><!-- / project -->
+      {% endfor %}
+    
+    
+    </ul>
+  </div>
+
+</div>
+
+{% endblock content %}
