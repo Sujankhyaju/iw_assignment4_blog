@@ -1,13 +1,13 @@
 from django.db import models
 
 # Create your models here.
-# class Author(models.Model):
-#     name = models.CharField(max_length=50)
-#     email = models.EmailField()
-#     bio = models.TextField(max_length=250)
+class Author(models.Model):
+    name = models.CharField(max_length=50)
+    email = models.EmailField()
+    bio = models.TextField(max_length=250)
 
-#     def __str__(self):
-#         return self.name
+    def __str__(self):
+        return self.name
 
 
 class Blogs(models.Model):
@@ -23,6 +23,6 @@ class Blogs(models.Model):
     def __str__(self):
 
         return self.title
-        # f"{self.title[:10]}... -{self.author}"
+        
 
  
