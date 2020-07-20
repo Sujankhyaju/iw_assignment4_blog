@@ -1,3 +1,4 @@
 .idea/
 .vscode/
 Myblog/env.py
+/db.sqlite3
